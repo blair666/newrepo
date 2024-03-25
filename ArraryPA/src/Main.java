@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)
@@ -176,6 +177,9 @@ Task 10: Create an array that includes an integer, 3 strings, and 1 double. Prin
 */
 
         System.out.println("**** Task 10 ****");
+        Object[] mixed = {"Hello","Java","Program",20,6.66};
+        System.out.println("Here is the mixed arrary: " + Arrays.toString(mixed));
+
 
 /*
 Task 11: Write some Java code that asks the user how many favorite things they have.
@@ -199,9 +203,22 @@ phone tv xbox wine beer sofa book
 */
 
         System.out.println("**** Task 11 ****");
+        System.out.println("How many favorite things do you have?");
 
+        Scanner sc = new Scanner(System.in);
+        int nthings = sc.nextInt();
+        sc.nextLine();
 
+        String[] mthings = new String[nthings];
+        for(int i=0;i<nthings;i++)
+        {
+            System.out.println("Enter your thing: ");
+            mthings[i] = sc.nextLine();
+        }
 
+        System.out.println("Your favorite  things are: " + Arrays.toString(mthings));
+
+//this is a comment
 
 
         
